@@ -1,0 +1,326 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background-color: #333;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #222;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.nav-links .button {
+  background-color: #bbb;
+  color: #000;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.navbar h3 {
+  color: #FFE3E3;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 65%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4; /* Makes the image translucent */
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  margin-left: 60%; /* Start the text from the middle of the page */
+  transform: translate(-10%, -70%); /* Slightly shift it towards the left for better alignment */
+  max-width: 40%;
+  color: #fff;
+  text-align: left;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-text h1 {
+  color: #FFE3E3;
+  font-size: 3rem;
+  margin: 0 0 1rem;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin: 1rem 0 3rem;
+}
+
+.hero-text .button {
+  background-color: #bbb;
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-left: 12rem; /* Adds space to the left to shift the button towards the right */
+}
+
+/* Education Section (education.html) */
+.content {
+  padding: 2rem;
+  max-width: 80%;
+  margin: 0 auto;
+  background-color: #333;
+  color: #fff;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #bbb;
+}
+
+/* Timeline structure */
+.timeline {
+  position: relative;
+  padding-left: 2rem;
+  border-left: 3px solid #555;
+  margin: 2rem 0;
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-marker {
+  width: 1rem;
+  height: 1rem;
+  background-color: #EFB6C8;
+  border-radius: 50%;
+  position: absolute;
+  left: -0.6rem;
+  top: 0.5rem;
+}
+
+.timeline-card {
+  background-color: #444;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 1.5rem;
+  flex: 1;
+}
+
+.timeline-card h2 {
+  font-size: 1.5rem;
+  color: #A35C7A;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card p {
+  color: #ddd;
+  margin: 0.2rem 0;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Project Section (projects.html) */
+.project {
+  background-color: #444;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-left: 1.5rem;
+  flex: 1;
+  margin-bottom: 2rem; /* Adds space after each project card */
+}
+
+.project h2 {
+  font-size: 1.5rem;
+  color: #A35C7A;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  color: #ddd;
+  margin: 0.2rem 0;
+}
+
+.project ul {
+  list-style-type: square;
+  margin-left: 20px;
+}
+
+.project ul li {
+  margin-bottom: 10px;
+}
+
+
+/* Contact Section */
+.hero-text-contact {
+  position: relative;
+  z-index: 2;
+  margin-left: 65%; /* Start the text from the middle of the page */
+  transform: translate(-10%, -200%); /* Slightly shift it towards the left for better alignment */
+  max-width: 40%;
+  color: #fff;
+  text-align: left;
+}
+
+#contact {
+  padding: 4rem 2rem;
+  background-color: #333;
+  color: #fff;
+  margin-top: 1rem; /* Adding space below the hero section */
+}
+
+#contact .content {
+  position: relative;
+  z-index: 2;
+  margin-left: 65%; /* Start the text from the middle of the page */
+  transform: translate(-10%, -220%); /* Slightly shift it towards the left for better alignment */
+  max-width: 40%;
+  color: #fff;
+  text-align: left;
+  background-color: #444;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#contact h2 {
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: #A35C7A;
+  text-align: center;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.contact-item i {
+  font-size: 1.5rem;
+  color: #bbb;
+}
+
+.contact-item a {
+  color: #bbb;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Style for all skill icons */
+/* General Styles */
+.skills {
+  padding: 20px;
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.skills-section {
+  margin-bottom: 40px;
+}
+
+.skills-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  text-align: center;
+  color: #ffffff;
+}
+
+/* Skill Rows and Items */
+.skills-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+}
+
+/* Skill Item Wrapper */
+.skill-item {
+  width: 80px; /* Set a fixed width for consistency */
+  height: 100px; /* Include space for the label */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+/* Add a background to make sizes visually clear (optional) */
+.skill-item .icon {
+  background-color: #f9f9f9;
+  padding: 8px;
+  border: 1px solid #ddd; /* Optional border for uniformity */
+  border-radius: 8px; /* Optional: Rounded edges */
+}
+
+/* Icons: Force Same Size */
+.icon {
+  width: 64px !important; /* Force width */
+  height: 64px !important; /* Force height */
+  object-fit: contain;
+  display: block;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 4px;
+}
+

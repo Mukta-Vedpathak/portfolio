@@ -1,0 +1,39 @@
+/* Animation Styles */
+
+/* Fade-in effect */
+.animate-fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Bounce effect */
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Hover animations for links */
+.navbar a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.navbar a:hover {
+    transform: scale(1.1);
+}
