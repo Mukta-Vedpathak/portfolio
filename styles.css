@@ -5,6 +5,7 @@ body {
   background-color: #333;
   color: #fff;
   overflow-x: hidden;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .navbar {
@@ -16,6 +17,8 @@ body {
   position: sticky;
   top: 0;
   z-index: 1000;
+  opacity: 0;
+  animation: slideInFromTop 1s forwards;
 }
 
 .nav-links {
@@ -42,6 +45,7 @@ body {
   color: #FFE3E3;
 }
 
+/* Hero Section */
 /* Hero Section */
 .hero {
   position: relative;
@@ -72,6 +76,17 @@ body {
   color: #fff;
   text-align: left;
   font-family: 'Times New Roman', Times, serif;
+  opacity: 0; /* Start with text invisible */
+  animation: fadeIn 1.5s ease-in-out forwards; /* Fade in the text */
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; /* Start with text invisible */
+  }
+  100% {
+    opacity: 1; /* Fade it in */
+  }
 }
 
 .hero-text h1 {
@@ -79,11 +94,13 @@ body {
   font-size: 3rem;
   margin: 0 0 1rem;
   line-height: 1.2;
+  animation: fadeIn 1s ease-out; /* Animation delay for h1 */
 }
 
 .hero-text p {
   font-size: 1.25rem;
   margin: 1rem 0 3rem;
+  animation: fadeIn 1.2s ease-out ; /* Animation delay for p */
 }
 
 .hero-text .button {
@@ -93,7 +110,8 @@ body {
   border-radius: 5px;
   text-decoration: none;
   font-size: 1.5rem;
-  margin-left: 12rem; /* Adds space to the left to shift the button towards the right */
+  margin-left: 12rem;
+  animation: fadeIn 1.4s ease-out; /* Animation delay for button */
 }
 
 /* Education Section (education.html) */
@@ -125,6 +143,7 @@ body {
   align-items: flex-start;
   margin-bottom: 2rem;
   position: relative;
+  animation: fadeInUp 1.5s ease-in-out;
 }
 
 .timeline-marker {
@@ -144,6 +163,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   margin-left: 1.5rem;
   flex: 1;
+  animation: fadeInUp 1.5s ease-out;
 }
 
 .timeline-card h2 {
@@ -169,7 +189,8 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
   margin-left: 1.5rem;
   flex: 1;
-  margin-bottom: 2rem; /* Adds space after each project card */
+  margin-bottom: 2rem; 
+  animation: fadeInUp 1.5s ease-in-out;/* Adds space after each project card */
 }
 
 .project h2 {
@@ -223,6 +244,7 @@ body {
   padding: 2rem;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  
 }
 
 #contact h2 {
@@ -289,7 +311,8 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 20px; /* Space between items */
+  gap: 20px;
+  animation: fadeInUp 2s ease-in-out; /* Space between items */
 }
 
 /* Skill Item Wrapper */
@@ -324,3 +347,56 @@ body {
   padding: 4px;
 }
 
+/* Animation Keyframes */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
